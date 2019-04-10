@@ -16,7 +16,7 @@ io.on('connection', socket => {
   })
 });
 
-mongoose.connect('mongodb+srv://magnartikki:magnartikki@cluster0-2xen9.mongodb.net/test?retryWrites=true', {
+mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASS}@cluster0-2xen9.mongodb.net/test?retryWrites=true`, {
   useNewUrlParser: true
 });
 
